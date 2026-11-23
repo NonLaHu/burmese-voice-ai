@@ -1,0 +1,49 @@
+# Python virtual environment
+.venv/
+venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# Python bytecode & caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Audio outputs & recording scratch files
+*.mp3
+*.wav
+*.m4a
+*.flac
+*.ogg
+*.aac
+*.tmp.wav
+
+# Pretrained model weights & large binary checkpoints (>100MB)
+*.safetensors
+*.onnx
+*.nara
+*.bin
+*.pt
+*.pth
+nara-mini-v1/weights/
+nara-mini-v1/packages/
+nara-mini-v1/onnx/
+nara-mini-v1/.cache/
+
+# Hugging Face cache / temporary download files
+.cache/
+.locks/
+*.incomplete
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/

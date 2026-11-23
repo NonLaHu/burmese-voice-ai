@@ -1,0 +1,19 @@
+# Core Deep Learning & Audio
+torch>=2.1.0
+torchaudio>=2.1.0
+transformers>=4.40.0
+accelerate>=0.30.0
+safetensors>=0.4.0
+bitsandbytes>=0.43.0
+soundfile>=0.12.0
+scipy>=1.11.0
+numpy>=1.26.0,<3
+
+# Hugging Face Model Hub
+huggingface_hub>=0.23.0
+
+# Nara Mini v1 / Kokoro TTS Dependencies
+onnxruntime>=1.18.0
+misaki==0.9.4
+phonemizer-fork==3.3.2
+espeakng-loader==0.2.4

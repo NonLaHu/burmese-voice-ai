@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do
+    DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
+    SOURCE="$(readlink "$SOURCE")"
+    [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+done
+SCRIPT_DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
+PYTHON_BIN="$SCRIPT_DIR/.venv/bin/python"
+
+if [ ! -f "$PYTHON_BIN" ]; then
+    echo "Error: Virtual environment not found at $SCRIPT_DIR/.venv" >&2
+    exit 1
+fi
+
+exec "$PYTHON_BIN" "$SCRIPT_DIR/voice_cli.py" "$@"
